@@ -14,8 +14,9 @@ import { EnumValues } from 'zod'
     Control : Control<any>,
     name:String,
     placholder:String,
-    descriptions :string ,
-    type : EnumValues
+    descriptions :String ,
+    type : any,
+    label :String
   }
 const CustomFormFields = ({ Control , name , placholder , descriptions , type }:CustomProps) => {
   return (
@@ -26,10 +27,10 @@ const CustomFormFields = ({ Control , name , placholder , descriptions , type }:
       <FormItem>
         <FormLabel>Username</FormLabel>
         <FormControl>
-          <Input   placeholder={placholder} {...field} />
+          <Input   placeholder="shadcn" {...field} />
         </FormControl>
         <FormDescription>
-          This is your public display name.
+      {descriptions}
         </FormDescription>
         <FormMessage />
       </FormItem>

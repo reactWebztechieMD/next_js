@@ -42,6 +42,13 @@ const PatientForm = () => {
              <p>Book your first online appointment first</p>
         </section>
     <CustomFormFields 
+    name={"User name"}
+    descriptions={"User name can contain email / mobile no"} 
+    label={"useName"}
+    placholder={"abc@xyz.com"}
+    type={"number"}
+    key={"dddd"}
+
     Control={form.control}
      />
       <Button type="submit">Submit</Button>
